@@ -1,6 +1,62 @@
-<html>
+<!DOCTYPE html><html><head>
+    <title>PlazmoCraft</title>
+    <link rel="stylesheet" type="text/css" href="0ipm8zoGLmsb/b2ctVJzodFNE.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1.1">
+	<meta charset="UTF-8"/>
+</head>
 <body>
-<h1>привет.</h1>
-  <p>как дела?</p>
-</body>
-</html>
+    <div class="topbar">
+        <img src="0ipm8zoGLmsb/DdmCXrLcxByb.ico" alt="icon" class="icon">
+        <h1 class="textTop">PlazmoCraft</h1>
+        <a class="textTopLnik" href="index.html"><b>главная</b></a>
+        <a class="textTopLnik" href="rep.html"><b>репозиторий</b></a>
+		<a class="textTopLnik" href="о_нас.html"><b>о нас</b></a>
+		<a class="textTopLnik" href="обновления.html"><b>обновления</b></a>
+    </div>    <br>
+    <div class="textBox">
+        <h1 class="bigCenter">Добро пожаловать на Plazmocraft</h1>
+        <hr class="solid">
+		<p class="normalCenter">                      Правила                    </p>
+        <p class="normalCenter">1 не оскорблять не кого на сервере - наказание: мут на 10 мин.             </p>
+        <p class="normalCenter">2 не ломать сервер - наказание: бан если сломали сервер.                   </p>
+        <p class="normalCenter">3 гриф разрешён.                                                           </p>
+		<p class="normalCenter">4 TNT запрещён - наказание: бан.                                           </p>
+		<p class="normalCenter">5 не ломать спавн - наказание: бан.                                        </p>
+		<p class="normalCenter">6 не оскорблять администраторов и сервер - наказание: пинок смерти или бан.</p>
+	</div>    <br>
+	<div class="textBox">
+        <h1 class="bigCenter">сервер</h1>
+        <hr class="solid">
+		<p class="normalCenter">сервер: PlazmoCraft</p>
+        <p>Игроки онлайн: <span id="onlinePlayers"></span></p>
+        <p>Макс игроков: <span id="maxPlayers"></span></p>
+        <p>IP адрес сервера: <span id="serverIP"></span></p>
+        <!-- Другая информация о сервере можно добавить по аналогии -->
+    </div>    <br>
+
+
+    <script>
+        // Используем AJAX запрос для получения данных с сервера Minecraft API
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://api.mcsrvstat.us/2/45.93.200.101', true);
+
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                var data = JSON.parse(request.responseText);
+                document.getElementById('onlinePlayers').innerText = data.players.online;
+                document.getElementById('maxPlayers').innerText = data.players.max;
+                document.getElementById('serverIP').innerText = data.ip;
+				document.getElementById('listp').innerText = data.list;
+                // Здесь вы можете добавить больше информации о сервере, используя другие ключи из объекта 'data'
+            } else {
+                console.error("Не удалось получить данные о сервере.");
+            }
+        };
+
+        request.onerror = function() {
+            console.error("Ошибка при выполнении запроса к серверу.");
+        };
+
+        request.send();
+    </script>
+</body></html>
