@@ -16,7 +16,7 @@
 		<a class="textTopLnik" href="о_нас.html"><b>о нас</b></a>
 		<a class="textTopLnik" href="обновления.html"><b>обновления</b></a>
     </div>    <br>
-    <div class="textBox">
+    <div class="countdown">
 	</div>    <br>
 
 <script>
@@ -31,7 +31,7 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("textBox").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
             if (distance <= 0) {
                 clearInterval(countdown);
