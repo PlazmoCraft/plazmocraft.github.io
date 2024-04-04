@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'minecraft';
+  src: url('asset/minecraft.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'suil';
+    src: url('./asset/Segoe\ UI\ Italic.ttf') format('truetype');
+  }
+
+body {
+    background-image: url("asset/bg_main.png");
+    background-repeat: repeat;
+}
+
+.topbar {
+    border-style: outset;
+    margin: 0 auto;
+    width: 50%;
+    background-image: url("asset/planks_oak.png");
+    background-repeat: repeat;
+    font-family: 'minecraft';
+    color: white;
+    overflow:hidden;
+}
+
+.oCams {
+    margin: 0 auto;
+    width: 100%;
+    overflow:hidden;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.camSpot {
+    border-style: outset;
+    background-color: black;
+    width: 120px;
+    float: left;
+    height: 20%;
+    font-family: 'minecraft';
+    color: white;
+    text-align:center;
+    padding-right: 4px;
+    margin-right: 5%;
+}
+
+.literallyNothing {
+    border-style: outset;
+    background-color: black;
+    width:100%;
+    height: 100px;
+    font-family: 'minecraft';
+    color: white;
+    text-align:center;
+}
+
+.textBox {
+    border-style: outset;
+    margin: 0 auto;
+    width: 45%;
+    background-image: url("asset/stone.png");
+    background-repeat: repeat;
+    font-family: 'minecraft';
+    color: white;
+    overflow:hidden;
+    text-align: center;
+    font-size: calc(0.66 * (1.5vh + 1.1vw));
+}
+
+.textTop {
+    float: left;
+    font-size: 24px;
+}
+
+.bigCenter {
+    font-size: calc(1.65 * (1.5vh + 1.1vw));
+    text-align: center;
+}
+
+.normalCenter {
+    font-size: calc(0.6 * (1.5vh + 1.1vw));
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textCenterLink {
+    font-size: 16px;
+    font-family: 'suil';
+    text-align: center;
+}
+
+.textTopLnik {
+    float: left;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: 'suil';
+    padding-top: 18px;
+}
+
+.icon {
+    float: left;
+    width: 42px;
+    padding-left: 10px;
+    padding-right: 8px;
+    padding-top: 9px;
+    padding-bottom: 5px;
+}
+
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: white;
+}
+a:active {
+    color: white;
+}
