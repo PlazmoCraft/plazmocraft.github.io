@@ -137,9 +137,16 @@ a:active {
     }
 
     #countdown {
-        font-size: 4rem;
-        color: #0066cc;
-        margin-top: 20px;
+            border-style: outset;
+            margin: 0 auto;
+            width: 45%;
+            background-image: url("asset/stone.png");
+            background-repeat: repeat;
+            font-family: 'minecraft';
+            color: white;
+            overflow:hidden;
+            text-align: center;
+            font-size: calc(0.66 * (1.5vh + 1.1vw));
     }
 
     #content {
